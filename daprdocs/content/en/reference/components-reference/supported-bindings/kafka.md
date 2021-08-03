@@ -48,7 +48,7 @@ spec:
 | topics | N | Input | A comma-separated string of topics. | `"mytopic1,topic2"` |
 | brokers | Y | Input/Output | A comma-separated string of Kafka brokers. | `"localhost:9092,dapr-kafka.myapp.svc.cluster.local:9093"` |
 | consumerGroup | N | Input | A kafka consumer group to listen on. Each record published to a topic is delivered to one consumer within each consumer group subscribed to the topic. | `"group1"` |
-| publishTopic | Y | Output | The topic to publish to. | `"mytopic"` |
+| publishTopic | N | Output | The topic to publish to. | `"mytopic"` |
 | authRequired | Y | Input/Output | Enable [SASL](https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer) authentication with the Kafka brokers. | `"true"`, `"false"` |
 | saslUsername | N | Input/Output | The SASL username used for authentication. Only required if `authRequired` is set to `"true"`. | `"adminuser"` |
 | saslPassword | N | Input/Output | The SASL password used for authentication. Can be `secretKeyRef` to use a [secret reference]({{< ref component-secrets.md >}}). Only required if `authRequired` is set to `"true"`. | `""`, `"KeFg23!"` |
